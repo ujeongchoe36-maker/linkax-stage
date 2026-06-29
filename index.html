@@ -9,9 +9,9 @@
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
   html,body{height:100%;}
-  body{background:radial-gradient(120% 120% at 50% 0%,#0d1030 0%,#06070f 70%);font-family:'Pretendard',-apple-system,sans-serif;
+  body{background:radial-gradient(120% 120% at 50% 0%,#f3f6fc 0%,#e6eaf3 72%);font-family:'Pretendard',-apple-system,sans-serif;
     min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 0 6px;}
-  .top{color:#9aa6d4;font-size:14px;margin-bottom:8px;text-align:center;} .top b{color:#dbe4ff;}
+  .top{color:#5a6690;font-size:14px;margin-bottom:8px;text-align:center;} .top b{color:#2d3766;}
 
   .stage{position:relative;--ch:min(86vh,900px);--cw:calc(var(--ch) * 0.8);
     width:min(97vw,calc(var(--cw) + 150px));margin:0 auto;}
@@ -110,8 +110,8 @@
   .foot{margin-top:auto;padding-top:2.8cqw;text-align:center;font-size:2.65cqw;color:#a6b2dd;line-height:1.5;} .foot .y{color:var(--c2);font-weight:800;}
 
   .edge{position:absolute;top:0;bottom:0;width:14%;z-index:5;pointer-events:none;}
-  .edge.l{left:0;background:linear-gradient(90deg,#06070f 6%,rgba(6,7,15,0));}
-  .edge.r{right:0;background:linear-gradient(270deg,#06070f 6%,rgba(6,7,15,0));}
+  .edge.l{left:0;background:linear-gradient(90deg,#e6eaf3 6%,rgba(230,234,243,0));}
+  .edge.r{right:0;background:linear-gradient(270deg,#e6eaf3 6%,rgba(230,234,243,0));}
   .nav{position:absolute;top:50%;transform:translateY(-50%);z-index:7;width:48px;height:48px;border-radius:50%;
     border:1px solid rgba(170,195,255,.4);background:rgba(20,26,60,.6);backdrop-filter:blur(6px);color:#fff;font-size:24px;
     display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .15s,background .15s;}
@@ -124,7 +124,7 @@
   .swipehint .ar{animation:nudge 1.1s ease-in-out infinite;}
   @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
   .dots{display:flex;gap:8px;justify-content:center;margin-top:14px;}
-  .dot{width:9px;height:9px;border-radius:50%;background:rgba(160,185,255,.3);border:none;cursor:pointer;transition:all .25s;}
+  .dot{width:9px;height:9px;border-radius:50%;background:rgba(90,110,170,.35);border:none;cursor:pointer;transition:all .25s;}
   .dot.on{width:26px;border-radius:999px;background:linear-gradient(90deg,#7fa8ff,#19c6e6);}
 
   @media (prefers-reduced-motion: reduce){
