@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  /* 모바일 접속 시 모바일 버전으로 자동 이동 (PC는 영향 없음 · 주소 뒤 ?pc 붙이면 PC 강제) */
+  (function(){
+    try{
+      var forcePc = location.search.indexOf('pc') !== -1;
+      var isMobile = window.matchMedia('(max-width: 640px)').matches
+        || /Mobi|Android|iPhone|iPod|iPad/i.test(navigator.userAgent);
+      if(isMobile && !forcePc){ location.replace('index_mobile.html'); }
+    }catch(e){}
+  })();
+</script>
 <title>LINK-AX STAGE 1회차 — 슬라이드 카드뉴스</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
