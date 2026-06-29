@@ -130,9 +130,10 @@
   .dot{width:9px;height:9px;border-radius:50%;background:rgba(90,110,170,.35);border:none;cursor:pointer;transition:all .25s;}
   .dot.on{width:26px;border-radius:999px;background:linear-gradient(90deg,#7fa8ff,#19c6e6);}
 
-  /* 모바일: 좌우 화살표 숨김(스와이프로 이동), 화살표가 카드를 가리지 않게 */
+  /* 모바일: 좌우 화살표 + 좌우 페이드(흰 그림자) 숨김 — 카드가 깔끔하게 보이게 */
   @media (max-width:640px){
     .nav{display:none;}
+    .edge{display:none;}
   }
 
   @media (prefers-reduced-motion: reduce){
