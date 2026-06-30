@@ -31,7 +31,8 @@
   .card:nth-child(3){--c1:#19c6e6;--c2:#5fe6c0;}
   .card:nth-child(4){--c1:#9b5cff;--c2:#ff6fb0;}
   .card:nth-child(5){--c1:#3aa0ff;--c2:#7b5cff;}
-  .card:nth-child(6){--c1:#5b6eff;--c2:#f5d98b;}
+  .card:nth-child(6){--c1:#3aa0ff;--c2:#7b5cff;}
+  .card:nth-child(7){--c1:#5b6eff;--c2:#f5d98b;}
   .card::before{content:"";position:absolute;inset:-35%;z-index:0;pointer-events:none;
     background:
       radial-gradient(40% 40% at 76% 16%,color-mix(in srgb,var(--c1) 70%,transparent),transparent 70%),
@@ -98,13 +99,20 @@
   .part .pic{flex:none;width:11cqw;height:11cqw;border-radius:3cqw;font-size:5.2cqw;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,color-mix(in srgb,var(--c1) 32%,transparent),color-mix(in srgb,var(--c2) 22%,transparent));border:1px solid color-mix(in srgb,var(--c1) 38%,transparent);}
   .part .pt{font-size:2.5cqw;font-weight:800;color:var(--c2);letter-spacing:.08em;} .part .ph{font-size:3.8cqw;font-weight:800;color:#fff;margin-top:.2cqw;} .part .pl{font-size:2.6cqw;color:#c6d1f3;margin-top:.7cqw;line-height:1.45;}
 
-  .prow{display:flex;align-items:center;gap:2.2cqw;border-radius:3cqw;padding:1.8cqw 2.6cqw;margin-top:1.15cqw;background:linear-gradient(110deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(160,185,255,.2);}
-  .prow .rc{flex:none;text-align:center;min-width:15cqw;} .prow .r{font-size:3.2cqw;font-weight:900;} .prow .d{font-size:2.3cqw;color:#a6b2dd;margin-top:.2cqw;} .prow .tm{font-size:2cqw;font-weight:700;color:#9fb0d8;margin-top:.3cqw;white-space:nowrap;}
+  .prow{display:flex;align-items:center;gap:2.8cqw;border-radius:3.4cqw;padding:3.6cqw 3.2cqw;margin-top:3cqw;background:linear-gradient(110deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(160,185,255,.2);}
+  .prow .rc{flex:none;text-align:center;min-width:16cqw;} .prow .r{font-size:3.6cqw;font-weight:900;} .prow .d{font-size:2.45cqw;color:#a6b2dd;margin-top:.3cqw;} .prow .tm{font-size:2.2cqw;font-weight:700;color:#9fb0d8;margin-top:.4cqw;white-space:nowrap;}
   .prow .vline{width:1px;align-self:stretch;background:rgba(160,185,255,.28);}
   .prow .pinfo{flex:1;min-width:0;text-align:left;}
-  .prow .tp{font-size:2.55cqw;font-weight:700;color:#fff;line-height:1.3;text-align:left;}
-  .prow .ptags{margin-top:1cqw;display:flex;flex-wrap:wrap;gap:1.15cqw;}
-  .prow .ht{font-size:2cqw;font-weight:700;color:#cfe0ff;background:color-mix(in srgb,var(--c1) 16%,transparent);border:1px solid color-mix(in srgb,var(--c1) 30%,transparent);border-radius:999px;padding:.62cqw 1.7cqw;}
+  .prow .tp{font-size:2.95cqw;font-weight:700;color:#fff;line-height:1.3;text-align:left;word-break:keep-all;}
+  .prow .ptags{margin-top:1.3cqw;display:flex;flex-wrap:wrap;gap:1.3cqw;}
+  .prow .ht{font-size:2.15cqw;font-weight:700;color:#cfe0ff;background:color-mix(in srgb,var(--c1) 16%,transparent);border:1px solid color-mix(in srgb,var(--c1) 30%,transparent);border-radius:999px;padding:.8cqw 2cqw;}
+  .rmhint{font-size:2.4cqw;font-weight:600;color:#9fb0d8;margin-bottom:1cqw;text-align:center;}
+  .prow{cursor:pointer;position:relative;transition:border-color .2s;}
+  .prow .tp .more{color:var(--c2);font-weight:900;font-size:.82em;margin-left:.6cqw;vertical-align:.04em;}
+  .prow .kc{position:absolute;z-index:20;top:50%;right:2.6cqw;transform:translateY(-50%) scale(.95);transform-origin:right center;width:48cqw;background:linear-gradient(160deg,#161c46,#0e1230);border:1px solid color-mix(in srgb,var(--c2) 60%,transparent);border-radius:3cqw;padding:2.8cqw 3cqw;box-shadow:0 16px 40px rgba(0,0,0,.55);font-size:2.1cqw;line-height:1.5;font-weight:500;color:#d3dcf7;word-break:keep-all;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,transform .2s ease;}
+  .prow:hover .kc,.prow:focus .kc,.prow:focus-within .kc{opacity:1;visibility:visible;transform:translateY(-50%) scale(1);}
+  .prow .kc .kctutor{margin-top:1.6cqw;padding-top:1.4cqw;border-top:1px solid rgba(160,185,255,.25);font-weight:800;color:var(--c2);}
+  .prow:hover,.prow:focus,.prow:focus-within{border-color:color-mix(in srgb,var(--c2) 50%,transparent);outline:none;}
 
   .applybtn{display:flex;align-items:center;justify-content:center;gap:2.2cqw;margin-top:3.4cqw;text-decoration:none;border-radius:3.6cqw;padding:4.2cqw 3cqw;font-size:4.2cqw;font-weight:900;color:#0a0e22;background:linear-gradient(100deg,var(--c2),#fff 50%,var(--c1));background-size:200% auto;box-shadow:0 12px 28px color-mix(in srgb,var(--c1) 45%,transparent);animation:sheen 6s linear infinite;text-align:center;}
   .checks{margin-top:2.8cqw;display:flex;flex-direction:column;gap:1.8cqw;align-items:stretch;text-align:left;} .checks .c{display:flex;align-items:flex-start;gap:2.2cqw;font-size:2.9cqw;color:#dbe4ff;line-height:1.45;text-align:left;} .checks .c>span{flex:1;text-align:left;}
@@ -130,7 +138,7 @@
   .dot{width:9px;height:9px;border-radius:50%;background:rgba(90,110,170,.35);border:none;cursor:pointer;transition:all .25s;}
   .dot.on{width:26px;border-radius:999px;background:linear-gradient(90deg,#7fa8ff,#19c6e6);}
 
-  /* 모바일: 좌우 화살표 + 좌우 페이드(흰 그림자) 숨김 — 카드가 깔끔하게 보이게 */
+  /* 모바일: 좌우 화살표 + 좌우 페이드(흰 그림자) 숨김 */
   @media (max-width:640px){
     .nav{display:none;}
     .edge{display:none;}
@@ -206,10 +214,13 @@
       <div class="foot">✦ 보고 듣는 데서 끝나지 않게, <span class="y">같이 눌러보며 익히는 시간</span> ✦</div>
     </div></section>
 
-    <!-- 5 STAGE 로드맵 -->
-    <section class="card"><div class="frame"><span class="tag">STAGE 로드맵</span><div class="stack top"><h2 class="t" style="font-size:6cqw;margin-top:2.2cqw;margin-bottom:1cqw">새로운 무대들도<br><span class="gtext">만나보세요</span></h2><div class="prow" style="border-color:color-mix(in srgb,var(--c2) 50%,transparent)"><div class="rc"><div class="r gtext">R01</div><div class="d">7.8(수)</div><div class="tm">15:30~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">Claude 주요 기능과 업무 활용 가능성 이해하기</div><div class="ptags"><span class="ht">#Claude_첫걸음</span><span class="ht">#설치부터_함께</span></div></div></div><div class="prow"><div class="rc"><div class="r gtext">R02</div><div class="d">7.22(수)</div><div class="tm">16:00~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">벤치마킹부터 시안 프로토타입까지</div><div class="ptags"><span class="ht fn">#COWORK</span><span class="ht">#초안_뚝딱</span><span class="ht">#기획자_주목</span></div></div></div><div class="prow"><div class="rc"><div class="r gtext">R03</div><div class="d">8.5(수)</div><div class="tm">16:00~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">AI로 나만의 커스터마이징 스케줄러 앱 만들기</div><div class="ptags"><span class="ht fn">#CODE</span><span class="ht">#캘린더_연동</span><span class="ht">#비개발자_첫_바이브코딩</span></div></div></div><div class="prow"><div class="rc"><div class="r gtext">R04</div><div class="d">8.19(수)</div><div class="tm">16:00~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">Claude를 활용한 리서치 및 보고서 제작</div><div class="ptags"><span class="ht fn">#COWORK</span><span class="ht fn">#CODE</span><span class="ht">#믿을자료만_쏙</span><span class="ht">#보고서_자동화</span></div></div></div><div class="prow"><div class="rc"><div class="r gtext">R05</div><div class="d">9.2(수)</div><div class="tm">16:00~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">MCP를 활용한 반복 데이터 업무 끝내기</div><div class="ptags"><span class="ht">#CODE</span><span class="ht">#MCP입문</span><span class="ht">#데이터추출_자동화</span><span class="ht">#요청없이_직접처리</span></div></div></div></div></div></section>
+    <!-- 5 STAGE 로드맵 (1/2) -->
+    <section class="card"><div class="frame"><span class="tag">STAGE 로드맵 ①</span><h2 class="t" style="font-size:6cqw;margin-top:2.2cqw;margin-bottom:0.6cqw;text-align:center">새로운 무대들도<br><span class="gtext">만나보세요</span></h2><div class="rmhint">💡 강의에 커서를 올리면 핵심 내용이 보여요</div><div class="stack"><div class="prow" tabindex="0" style="border-color:color-mix(in srgb,var(--c2) 50%,transparent)"><div class="rc"><div class="r gtext">R01</div><div class="d">7.8(수)</div><div class="tm">15:30~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">Claude 주요 기능과 업무 활용 가능성<br>이해하기<span class="more">ⓘ</span></div><div class="ptags"><span class="ht">#Claude_첫걸음</span><span class="ht">#설치부터_함께</span></div><div class="kc">· Claude App 설치 + 첫 실행 (챗·Cowork·Code 둘러보기)<br>· BMAD 시연 — 채팅창에서 AI 동료 호출<br>· Cowork로 시작하는 업무 효율화<div class="kctutor">🎤 구민석 · 최우정 · 정지영</div></div></div></div><div class="prow" tabindex="0"><div class="rc"><div class="r gtext">R02</div><div class="d">7.22(수)</div><div class="tm">14:00~15:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">벤치마킹부터 시안 프로토타입까지<span class="more">ⓘ</span></div><div class="ptags"><span class="ht">#COWORK</span><span class="ht">#CODE</span><span class="ht">#초안_뚝딱</span><span class="ht">#기획자_주목</span></div><div class="kc">· 리서치·벤치마킹 자료로 기획 보고문서 작성<br>· 보고문서 기반 시안·프로토타입 초안 제작<div class="kctutor">🎤 기획팀 정원경</div></div></div></div><div class="prow" tabindex="0"><div class="rc"><div class="r gtext">R03</div><div class="d">8.5(수)</div><div class="tm">16:00~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">AI로 나만의 커스터마이징 스케줄러 앱<br>만들기<span class="more">ⓘ</span></div><div class="ptags"><span class="ht">#CODE</span><span class="ht">#캘린더_연동</span><span class="ht">#비개발자_첫_바이브코딩</span></div><div class="kc">· 자연어 대화만으로 내 업무 패턴 맞춤 스케줄러 앱 제작<br>· Google Calendar 연동 Claude 활용<div class="kctutor">🎤 콘서트사업팀 김지연</div></div></div></div></div></div></section>
 
-    <!-- 6 신청 -->
+    <!-- 6 STAGE 로드맵 (2/2) -->
+    <section class="card"><div class="frame"><span class="tag">STAGE 로드맵 ②</span><h2 class="t" style="font-size:6cqw;margin-top:2.2cqw;margin-bottom:0.6cqw;text-align:center">새로운 무대들도<br><span class="gtext">만나보세요</span></h2><div class="rmhint">💡 강의에 커서를 올리면 핵심 내용이 보여요</div><div class="stack"><div class="prow" tabindex="0" style="border-color:color-mix(in srgb,var(--c2) 50%,transparent)"><div class="rc"><div class="r gtext">R04</div><div class="d">8.19(수)</div><div class="tm">16:00~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">Claude를 활용한 리서치 및 보고서 제작<span class="more">ⓘ</span></div><div class="ptags"><span class="ht">#COWORK</span><span class="ht">#CODE</span><span class="ht">#믿을자료만_쏙</span><span class="ht">#보고서_자동화</span></div><div class="kc">· 신뢰 가능한 기관·자료원 한정 자료 조사<br>· 외부 보고서·장문 자료 핵심 요약<br>· 맞춤형 템플릿 기반 브리핑 자동화<div class="kctutor">🎤 투자관리팀 한겨레</div></div></div></div><div class="prow" tabindex="0"><div class="rc"><div class="r gtext">R05</div><div class="d">9.2(수)</div><div class="tm">16:00~17:00</div></div><div class="vline"></div><div class="pinfo"><div class="tp">MCP를 활용한 반복 데이터 업무 끝내기<span class="more">ⓘ</span></div><div class="ptags"><span class="ht">#CODE</span><span class="ht">#MCP입문</span><span class="ht">#데이터추출_자동화</span><span class="ht">#요청없이_직접처리</span></div><div class="kc">· MCP 개념과 Claude 도구 호출 구조 이해<br>· 반복 데이터 요청 사례 기반 자동화 시나리오<br>· 좌석별 판매현황 등 데이터 추출·정리 시연<div class="kctutor">🎤 연동개발팀 최민석</div></div></div></div></div></div></section>
+
+    <!-- 7 신청 -->
     <section class="card"><div class="frame">
       <span class="tag">신청 안내</span>
       <div class="stack top">
